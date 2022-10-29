@@ -1,0 +1,29 @@
+#include "txlib.h"
+int main()
+{
+
+txCreateWindow(1000,800);
+txSetColor (RGB (0,0,128),5);
+txSetFillColor(TX_BLUE);
+txRectangle (0,0,1000,350);
+txSetFillColor(TX_GREEN);
+txSetColor (RGB (0, 128, 0), 5);
+txRectangle (0,350,1000,800);
+txSetColor (RGB ( 128,64,0), 5);
+txSetFillColor (RGB (128,64,0));
+txRectangle (480,325,520,600);
+txSetColor (RGB (128, 0, 0), 5);
+txSetFillColor (TX_WHITE);
+txRectangle (300,150,700,325);
+txSetFillColor (RGB (255,255,0));
+txSetColor (RGB (253,134,2), 5);
+txCircle (100,100,70);
+txSetColor (RGB (128,128,128),5);
+txSetFillColor (RGB (128,128,128));
+txRectangle (0,600,1000,800);
+
+
+
+
+return 0;
+}
