@@ -1,244 +1,145 @@
-#include "TXLib.h"
+ #include "TXLib.h"
  int main()
  {
-
-txCreateWindow(1000,800);
+ txCreateWindow(1000,800);
 
 txSetColor (RGB (0,0,128),5);
 txSetFillColor(TX_BLUE);
-txRectangle (0,0,1000,350); //небо
-
-
-
-
-
-txSetFillColor(TX_GREEN);
-txSetColor (RGB (0, 128, 0), 5);
-txRectangle (0,350,1000,800); //земля
-
- txSetColor (RGB (139, 69, 19), 5);
- txSetFillColor (RGB (139, 69, 19));
-txRectangle (150,320,190,420);
- txSetColor (RGB (107, 142, 35), 5);
-txSetFillColor (RGB( 107, 142, 35));
-  POINT s[9] = {{120, 175}, {220, 175}, {240, 225}, {240, 250}, {220, 325}, {170,330}, {120,325}, {100,250}, {100,225}};
-            txPolygon (s, 9); //левое дерево
-
-
-
-
-txSetColor (RGB (139, 69, 19), 5);
- txSetFillColor (RGB (139, 69, 19));
-txRectangle (800,320,820,420);
- txSetColor (RGB (107, 142, 35), 5);
-txSetFillColor (RGB( 107, 142, 35));
-  POINT p[9] = {{780,175 }, {840,175}, {885,225 }, {885,250 }, {840, 325}, {810,330}, {780,325}, {755,250}, {755,225}};
-            txPolygon (p, 9); //правое дерево
-
-
-
-txSetColor (RGB (128,128,128),5);
-txSetFillColor (RGB (128,128,128));
-txRectangle (0,600,1000,800);  //баскетбольное поле
-
-
-
-txSetColor (RGB (0,0,0),5);
-txSetFillColor (RGB (128,128,128));
-txCircle (500,650,170);
-txLine (0,603,1000,603);//разметка поля
-
-
-
-
-txSetColor (RGB (128,128,128), 5);
-txSetFillColor (TX_GREEN);
-txRectangle (0,400,1000,600);  //забор
-
-
-
-
-txSetFillColor (TX_GREEN);
-txSetFillColor (RGB (128,128,128));
-txLine (0,400,40,600);
-txSetFillColor (RGB (128,128,128));
-txLine (40,400,80,600);
-txSetFillColor (RGB (128,128,128));
-txLine (80,400,120,600);
-txSetFillColor (RGB (128,128,128));
-txLine (120,400,160,600);
-txSetFillColor (RGB (128,128,128));
-txLine (160,400,200,600);
-txSetFillColor (RGB (128,128,128));
-txLine (200,400,240,600);
-txSetFillColor (RGB (128,128,128));
-txLine (240,400,280,600);
-txSetFillColor (RGB (128,128,128));
-txLine (280,400,320,600);
-txSetFillColor (RGB (128,128,128));
-txLine (320,400,360,600);
-txSetFillColor (RGB (128,128,128));
-txLine (360,400,400,600);
-txSetFillColor (RGB (128,128,128));
-txLine (400,400,440,600);
-txSetFillColor (RGB (128,128,128));
-txLine (440,400,480,600);
-txSetFillColor (RGB (128,128,128));
-txLine (480,400,520,600);
-txSetFillColor (RGB (128,128,128));
-txLine (520,400,560,600);
-txSetFillColor (RGB (128,128,128));
-txLine (560,400,600,600);
-txSetFillColor (RGB (128,128,128));
-txLine (600,400,640,600);
-txSetFillColor (RGB (128,128,128));
-txLine (640,400,680,600);
-txSetFillColor (RGB (128,128,128));
-txLine (680,400,720,600);
-txSetFillColor (RGB (128,128,128));
-txLine (720,400,760,600);
-txSetFillColor (RGB (128,128,128));
-txLine (760,400,800,600);
-txSetFillColor (RGB (128,128,128));
-txLine (800,400,840,600);
-txSetFillColor (RGB (128,128,128));
-txLine (840,400,880,600);
-txSetFillColor (RGB (128,128,128));
-txLine (880,400,920,600);
-txSetFillColor (RGB (128,128,128));
-txLine (920,400,960,600);
-txSetFillColor (RGB (128,128,128));
-txLine (960,400,1000,600);  //решетки забора снизу вверх
-
-txSetFillColor (RGB (128,128,128));
-txLine (40,400,0,600);
-txSetFillColor (RGB (128,128,128));
-txLine (80,400,40,600);
-txSetFillColor (RGB (128,128,128));
-txLine (120,400,80,600);
-txSetFillColor (RGB (128,128,128));
-txLine (160,400,120,600);
-txSetFillColor (RGB (128,128,128));
-txLine (200,400,160,600);
-txSetFillColor (RGB (128,128,128));
-txLine (240,400,200,600);
-txSetFillColor (RGB (128,128,128));
-txLine (280,400,240,600);
-txSetFillColor (RGB (128,128,128));
-txLine (320,400,280,600);
-txSetFillColor (RGB (128,128,128));
-txLine (360,400,320,600);
-txSetFillColor (RGB (128,128,128));
-txLine (400,400,360,600);
-txSetFillColor (RGB (128,128,128));
-txLine (440,400,400,600);
-txSetFillColor (RGB (128,128,128));
-txLine (480,400,440,600);
-txSetFillColor (RGB (128,128,128));
-txLine (520,400,480,600);
-txSetFillColor (RGB (128,128,128));
-txLine (560,400,520,600);
-txSetFillColor (RGB (128,128,128));
-txLine (600,400,560,600);
-txSetFillColor (RGB (128,128,128));
-txLine (640,400,600,600);
-txSetFillColor (RGB (128,128,128));
-txLine (680,400,640,600);
-txSetFillColor (RGB (128,128,128));
-txLine (720,400,680,600);
-txSetFillColor (RGB (128,128,128));
-txLine (760,400,720,600);
-txSetFillColor (RGB (128,128,128));
-txLine (800,400,760,600);
-txSetFillColor (RGB (128,128,128));
-txLine (840,400,800,600);
-txSetFillColor (RGB (128,128,128));
-txLine (880,400,840,600);
-txSetFillColor (RGB (128,128,128));
-txLine (920,400,880,600);
-txSetFillColor (RGB (128,128,128));
-txLine (960,400,920,600);
-txSetFillColor (RGB (128,128,128));
-txLine (1000,400,960,600);  //решетки забора сверху вниз
-
- txSetColor (RGB (139, 69, 19), 5);
-txSetFillColor (RGB (139, 69, 19));
-txRectangle(150,390,190,420) ; //часть дерева за забором
-
-
-
-
-txSetColor (RGB (139, 69, 19), 5);
-txSetFillColor (RGB (139, 69, 19));
-txRectangle(800,320,820,425) ;//часть правого дерева за забором
-
-txSetColor (RGB (128,128,128), 5);
-txSetFillColor (RGB (128,128,128));
-txLine (840,400,800,600);
-txSetFillColor (RGB (128,128,128));
-txLine (800,400,840,600);
-txSetFillColor (RGB (128,128,128));
-txLine (760,400,800,600);
-txSetFillColor (RGB (128,128,128));
-txLine (800,400,760,600);       //часть забора перед деревом
-
-
-txSetColor (RGB (128,128,128), 5);
-txSetFillColor (RGB (128,128,128));
-txLine (160,400,200,600);
-txSetFillColor (RGB (128,128,128));
-txLine (200,400,240,600);
-txSetFillColor (RGB (128,128,128));
-txLine (200,400,160,600);
-txSetFillColor (RGB (128,128,128));
-txLine (240,400,200,600);
-txSetFillColor (RGB (128,128,128));
-txLine (160,400,120,600);
-txRectangle (0,400,1000,401); //забор перед левым деревом
-
-
-
-txSetColor (RGB ( 128,64,0), 5);
-txSetFillColor (RGB (128,64,0));
-txRectangle (480,325,520,600);//столб
-
-txSetColor (RGB (128, 0, 0), 5);
-txSetFillColor (TX_WHITE);
-txRectangle (300,150,700,325);//щит
-
-txSetFillColor (RGB (255,255,0));
-txSetColor (RGB (255,255,0), 5);
+txRectangle (0,0,1000,800); //небо
+txSetColor (RGB (69,168,36), 5);
+txSetFillColor (RGB (69,168,36));
+txRectangle( 0,500,1000,800); //земля
+txSetColor (RGB (121,129,134), 5);
+txSetFillColor (RGB (121,129,134));
+POINT trap[4] = {{600, 600}, {670, 300}, {900, 300}, {1000, 600}};
+txPolygon (trap, 4); //гора
+txSetColor (RGB (227,233,22), 5);
+txSetFillColor (RGB (227,233,22));
 txCircle (100,100,70);  //солнце
-
-
-
-txSetColor (RGB (0,0,0),5);
+txSetColor (RGB (228,199,27), 5);
+txSetFillColor (RGB (228,199,27));
+txLine (70,180,70,240);
+txSetColor (RGB (228,199,27), 5);
+txSetFillColor (RGB (228,199,27));
+txLine (130,180,145,240);  //лучвнизпрямо
+txSetColor (RGB (228,199,27), 5);
+txSetFillColor (RGB (228,199,27));
+txLine (185,160,235,203);   //лучвниздиаг
+txSetColor (RGB (228,199,27), 5);
+txSetFillColor (RGB (228,199,27));
+txLine (200,110,267,110);   //лучвправопрямо
+txSetColor (RGB (228,199,27), 5);
+txSetFillColor (RGB (228,199,27));
+txLine (190,50,250,15);    //лучвверхдиаг
+txSetColor (RGB (231,158,24), 5);
+txSetFillColor (RGB (231,158,24));
+txEllipse (550,575,565,585); //леваяступня
+txSetColor (RGB (231,158,24), 5);
+txSetFillColor (RGB (231,158,24));
+txEllipse (520,575,535,585);  //праваяступня
+txSetColor (RGB (231,158,24), 5);
+txSetFillColor (RGB (231,158,24));
+txLine (533,540,533,580); //леваянога
+txSetColor (RGB (231,158,24), 5);
+txSetFillColor (RGB (231,158,24));
+txLine (553,540,553,580);  //праваянога
+txSetColor (RGB (231,158,24), 5);
+txSetFillColor (RGB (231,158,24));
+txEllipse (524,480,562,540);  //туловище
+txSetColor (RGB (231,158,24), 5);
+txSetFillColor (RGB (231,158,24));
+txCircle (541,460,20); //голова
+txSetColor (RGB (231,158,24), 5);
+txSetFillColor (RGB (231,158,24));
+POINT catear1[3] = {{523,449}, {530,430}, {539,440}};
+txPolygon (catear1, 3); //левоеухо
+txSetColor (RGB (231,158,24), 5);
+txSetFillColor (RGB (231,158,24));
+POINT catear2[3] = {{541,449}, {552,430}, {560,455}};
+txPolygon (catear2, 3);  //правоеухо
+txSetColor (RGB (231,158,24), 5);
+txSetFillColor (RGB (231,158,24));
+txLine (528,493,508,530);
+txSetColor (RGB (231,158,24), 5);
+txSetFillColor (RGB (231,158,24));
+txLine (558,493,578,530);
+txSetColor (RGB (255,255,255), 5);
 txSetFillColor (RGB (255,255,255));
-txRectangle(375,175,625,300); //разметка на щите
-
+txCircle (530,455,5);
+txSetColor (RGB (255,255,255), 5);
+txSetFillColor (RGB (255,255,255));
+txCircle (550,455,5);
 txSetColor (RGB (0,0,0), 5);
 txSetFillColor (RGB (0,0,0));
-txLine (450,230,550,230);
-txSetColor (RGB(255, 0, 255 ),5);
-txSetFillColor(RGB (255, 0, 255));
-txLine (420,190,460,220);
-txLine (430,220,460,220);
-txLine (460,200,460,220);
-txLine (580,190,540,220);
-txLine (570,220,540,220);
-txLine (540,200,540,220);  //разметка в виде стрелок
-
-
-txSetFillColor (TX_WHITE);
-txSetColor (RGB (255,0,0),6);
-txEllipse (400,250,600,300); //кольцо
-
-
-
-
-
-
-
-
+txCircle (534,454,2);
+txSetColor (RGB (0,0,0), 5);
+txSetFillColor (RGB (0,0,0));
+txCircle (554,454,2);
+txSetColor (RGB (231,158,24), 5);
+txSetFillColor (RGB (231,158,24));
+txCircle (504,534,4);
+txSetColor (RGB (231,158,24), 5);
+txSetFillColor (RGB (231,158,24));
+txCircle (582,534,4);
+txSetColor (RGB (181,123,53), 5);
+txSetFillColor (RGB (181,123,53));
+txCircle (539,470,2);
+txSetColor (RGB (181,123,53), 5);
+txSetFillColor (RGB (181,123,53));
+txCircle (545,470,2);
+txSetColor (RGB (72,83,77), 5);
+txSetFillColor (RGB (72,83,77));
+txEllipse (672,294,678,300);
+txSetColor (RGB (72,83,77), 5);
+txSetFillColor (RGB (72,83,77));
+txEllipse (682,294,688,300);
+txSetColor (RGB (72,83,77), 5);
+txSetFillColor (RGB (72,83,77));
+txLine (676,287,676,295);
+txSetColor (RGB (72,83,77), 5);
+txSetFillColor (RGB (72,83,77));
+txLine (686,287,686,295);
+txSetColor (RGB (72,83,77), 5);
+txSetFillColor (RGB (72,83,77));
+txEllipse (674,276,688,288); //тело
+txSetColor (RGB (72,83,77), 5);
+txSetFillColor (RGB (72,83,77));
+txEllipse (674,265,688,276);  //голова
+txSetColor (RGB (255,255,255), 5);
+txSetFillColor (RGB (255,255,255));
+txEllipse (677,269,680,272); //глаз
+txSetColor (RGB (72,83,77), 5);
+txSetFillColor (RGB (72,83,77));
+txEllipse (678,259,688,265);  //ухо
+txSetColor (RGB (0,0,0), 3);
+txSetFillColor (RGB (0,0,0));
+txEllipse (679,261,686,263);  //внухо
+txSetColor (RGB (72,83,77), 5);
+txSetFillColor (RGB (72,83,77));
+txLine (675,278,670,278);  //рукакамень
+txSetColor (RGB (0,0,0), 3);
+txSetFillColor (RGB (0,0,0));
+txEllipse (678,270,679,271); //внглаз
+txSetColor (RGB (0,0,0), 5);
+txSetFillColor (RGB (0,0,0));
+txEllipse (650,276,654,280);  //камень
+txSetColor (RGB (77,179,179), 3);
+txSetFillColor (RGB (77,179,179));
+txEllipse (100,600,400,700); //озеро
+txSetColor (RGB (64,0,0), 3);
+txSetFillColor (RGB (64,0,0));
+txRectangle (70,500,90,650);  //деревокорп
+txSetColor (RGB (0,64,0), 3);
+txSetFillColor (RGB (0,64,0));
+txEllipse (0,350,160,500); //дереволист
+txSetColor (RGB (255,255,255), 3);
+txSetFillColor (RGB (255,255,255));
+txEllipse (800,100,900,200);
+txSetColor (RGB (255,255,255), 3);
+txSetFillColor (RGB (255,255,255));
+txEllipse (300,150,400,230);
+txSetColor (RGB (255,255,255), 3);
+txSetFillColor (RGB (255,255,255));
+txEllipse (550,50,700,130);
 return 0;
 }
