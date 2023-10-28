@@ -1,0 +1,32 @@
+#include "TxLib.h"
+int main()
+{
+txCreateWindow (800,600);
+HDC map = txLoadImage ("C:\CodeBlocks\Resources\sus.bmp");
+int sizeX=txGetExtentX(map);
+int sizeY=txGetExtentY(map);
+
+
+
+int nanim=0;
+int t=1;
+while(!txGetAsyncKeyState(VK_ESCAPE))
+{
+
+
+txSetFillColor(RGB(128,255,255));
+txRectangle(0,0,800,600);
+
+
+//txBitBlt(txDC(),0,0,0,0,map,0,0);
+txTransparentBlt          (txDC(),0,0,sizeX,sizeY,map,sizeX,sizeY,RGB(0,0,0));
+//txTransparentBlt          (txDC(),sizeX,sizeY,sizeX,sizeY,map,1*sizeX,(t%4)*sizeY,RGB(255,0,255));
+//txTransparentBlt          (txDC(),2*sizeX,2*sizeY,sizeX,sizeX,map,2*sizeX,(t%4)*sizeY,RGB(255,0,255));
+//txTransparentBlt          (txDC(),3*sizeX,3*sizeY,sizeX,sizeY,map,3*sizeX,(t%4)*sizeY,RGB(255,0,255));
+
+
+t++;
+txSleep(100);
+}
+
+}
